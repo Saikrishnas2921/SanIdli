@@ -25,7 +25,8 @@ const px = (id: number) =>
 const IMG = {
   idli: px(8312083),            // Overhead Shot of Indian Food (idli, vada, sambar) - same as overhead
   idliOverhead: px(8312083),   // Overhead Shot of Indian Food (idli, vada, sambar, chutney plate)
-  dosa: px(1639561),            // Selective Focus Photography of Cooked Food (Indian cuisine)
+  dosa: px(941869),             // Platter of Foods with dosa, curry, and chutney (Chan Walrus)
+  dosaMasala: px(32229637),     // Traditional South Indian Masala Dosa on Banana Leaf (Nikhil Bhatia)
   bananaLeaf: px(7234281),     // Variety of Cooked Food on Banana Leaf
   indianDishes: px(7129403),   // Various traditional Indian dishes served on table
   samosa: px(14477873),        // Delicious Fried Samosa in a Wicker Tray
@@ -43,6 +44,7 @@ const IMG = {
   fritters: px(1059943),       // Close-up Photo of Fritters
   coffee: px(324028),          // Close-up of Coffee Cup
   coffeeCup: px(2128016),      // White Ceramic Coffee Cup
+  paneerTikka: px(28674559),    // Classic Indian Curry Dish with Assorted Paneer Tikka
   paniPuri: px(5410400),        // Indian Street Food (reuse Pav Bhaji)
   dalMakhani: px(12737916),    // Dal Makhani on a White Bowl
 };
@@ -124,7 +126,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Masala Dosa",
         description: "Iconic crispy crepe filled with spiced potato masala – our bestseller",
         price: "$11.99",
-        image: IMG.dosa,
+        image: IMG.dosaMasala,
         popular: true,
         vegan: true,
         glutenFree: true,
@@ -133,7 +135,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Mysore Masala Dosa",
         description: "Fiery red chutney spread inside, stuffed with spiced potatoes – bold & beautiful",
         price: "$12.99",
-        image: IMG.dosa,
+        image: IMG.dosaMasala,
         popular: true,
         spiceLevel: 2,
         vegan: true,
@@ -143,7 +145,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Cheese Masala Dosa",
         description: "Crispy dosa oozing with melted cheese and masala potato filling",
         price: "$13.99",
-        image: IMG.dosa,
+        image: IMG.dosaMasala,
         popular: true,
         glutenFree: true,
       },
@@ -174,7 +176,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Spring Dosa",
         description: "Dosa folded like a spring roll, stuffed with veggies and paneer",
         price: "$13.99",
-        image: IMG.dosa,
+        image: IMG.dosaMasala,
       },
     ],
   },
@@ -362,7 +364,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Paneer 65",
         description: "Crispy paneer cubes tossed in a spicy, tangy masala with curry leaves",
         price: "$12.99",
-        image: IMG.pavBhaji,
+        image: IMG.paneerTikka,
         spiceLevel: 2,
         popular: true,
       },
@@ -401,7 +403,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Paneer Manchurian",
         description: "Crispy paneer cubes in a bold manchurian sauce with peppers",
         price: "$13.99",
-        image: IMG.pavBhaji,
+        image: IMG.paneerTikka,
         spiceLevel: 2,
       },
     ],
