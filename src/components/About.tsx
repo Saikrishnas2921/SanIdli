@@ -33,7 +33,7 @@ export default function About() {
               <div className="space-y-4 pt-8">
                 <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Dosa-chutney-sambhar.jpg/600px-Dosa-chutney-sambhar.jpg"
                     alt="Crispy golden dosa"
                     fill
                     className="object-cover"

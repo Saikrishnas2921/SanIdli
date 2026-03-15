@@ -21,12 +21,23 @@ export interface MenuCategory {
 const px = (id: number) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=600`;
 
+// Wikimedia Commons image helper (600px thumbnails)
+const wiki = (path: string) =>
+  `https://upload.wikimedia.org/wikipedia/commons/thumb/${path}`;
+
 // Verified Pexels photo IDs for South Indian food
 const IMG = {
   idli: px(8312083),            // Overhead Shot of Indian Food (idli, vada, sambar) - same as overhead
   idliOverhead: px(8312083),   // Overhead Shot of Indian Food (idli, vada, sambar, chutney plate)
-  dosa: px(941869),             // Platter of Foods with dosa, curry, and chutney (Chan Walrus)
-  dosaMasala: px(32229637),     // Traditional South Indian Masala Dosa on Banana Leaf (Nikhil Bhatia)
+  // Dosa images from Wikimedia Commons (each variety gets its own image)
+  dosaPlain: wiki("b/b1/Dosa-chutney-sambhar.jpg/600px-Dosa-chutney-sambhar.jpg"),
+  dosaMasala: wiki("c/c0/Masala_Dosa_in_triangle.jpg/600px-Masala_Dosa_in_triangle.jpg"),
+  dosaMysore: wiki("e/e5/Mysore_Masala_Dosa.jpg/600px-Mysore_Masala_Dosa.jpg"),
+  dosaCheese: wiki("b/ba/Cheese_mysore_masala_dosa.jpg/600px-Cheese_mysore_masala_dosa.jpg"),
+  dosaRava: wiki("6/6c/Rava_dosa.JPG/600px-Rava_dosa.JPG"),
+  dosaGhee: wiki("b/b8/Ghee_Roast_Dosa.jpg/600px-Ghee_Roast_Dosa.jpg"),
+  dosaPaper: wiki("9/9e/Paper_Dosa_(South_Indian_cuisine).jpg/600px-Paper_Dosa_(South_Indian_cuisine).jpg"),
+  dosaSpring: wiki("a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/600px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg"),
   bananaLeaf: px(7234281),     // Variety of Cooked Food on Banana Leaf
   indianDishes: px(7129403),   // Various traditional Indian dishes served on table
   samosa: px(14477873),        // Delicious Fried Samosa in a Wicker Tray
@@ -118,7 +129,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Plain Dosa",
         description: "Perfectly thin and crispy crepe served with sambar and trio of chutneys",
         price: "$9.99",
-        image: IMG.dosa,
+        image: IMG.dosaPlain,
         vegan: true,
         glutenFree: true,
       },
@@ -135,7 +146,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Mysore Masala Dosa",
         description: "Fiery red chutney spread inside, stuffed with spiced potatoes – bold & beautiful",
         price: "$12.99",
-        image: IMG.dosaMasala,
+        image: IMG.dosaMysore,
         popular: true,
         spiceLevel: 2,
         vegan: true,
@@ -145,7 +156,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Cheese Masala Dosa",
         description: "Crispy dosa oozing with melted cheese and masala potato filling",
         price: "$13.99",
-        image: IMG.dosaMasala,
+        image: IMG.dosaCheese,
         popular: true,
         glutenFree: true,
       },
@@ -153,7 +164,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Rava Onion Chili Dosa",
         description: "Semolina crepe studded with onions and green chilies – crispy perfection",
         price: "$12.99",
-        image: IMG.dosa,
+        image: IMG.dosaRava,
         spiceLevel: 2,
         vegan: true,
       },
@@ -161,14 +172,14 @@ export const menuCategories: MenuCategory[] = [
         name: "Ghee Roast Dosa",
         description: "Extra crispy dosa roasted in pure ghee until golden and aromatic",
         price: "$12.99",
-        image: IMG.dosa,
+        image: IMG.dosaGhee,
         glutenFree: true,
       },
       {
         name: "Paper Dosa",
         description: "Ultra-thin, extra large and impossibly crispy – a work of art",
         price: "$11.99",
-        image: IMG.dosa,
+        image: IMG.dosaPaper,
         vegan: true,
         glutenFree: true,
       },
@@ -176,7 +187,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Spring Dosa",
         description: "Dosa folded like a spring roll, stuffed with veggies and paneer",
         price: "$13.99",
-        image: IMG.dosaMasala,
+        image: IMG.dosaSpring,
       },
     ],
   },
