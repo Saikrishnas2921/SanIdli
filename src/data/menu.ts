@@ -25,11 +25,16 @@ const px = (id: number) =>
 const wiki = (path: string) =>
   `https://upload.wikimedia.org/wikipedia/commons/thumb/${path}`;
 
-// Verified Pexels photo IDs for South Indian food
+// Verified image sources for South Indian food
 const IMG = {
-  idli: px(8312083),            // Overhead Shot of Indian Food (idli, vada, sambar) - same as overhead
+  // === Idli & Vada ===
+  idli: px(8312083),            // Overhead Shot of Indian Food (idli, vada, sambar)
   idliOverhead: px(8312083),   // Overhead Shot of Indian Food (idli, vada, sambar, chutney plate)
-  // Dosa images from Wikimedia Commons (each variety gets its own image)
+  meduVada: wiki("0/0c/Medu_Vadas.JPG/600px-Medu_Vadas.JPG"),
+  sambarVada: wiki("f/fd/Medu_Vada_and_Sambhar.JPG/600px-Medu_Vada_and_Sambhar.JPG"),
+  curdVada: wiki("0/06/Dahi_Vada_or_Dahi_Bhalla.JPG/600px-Dahi_Vada_or_Dahi_Bhalla.JPG"),
+
+  // === Dosa (each variety gets its own image) ===
   dosaPlain: wiki("b/b1/Dosa-chutney-sambhar.jpg/600px-Dosa-chutney-sambhar.jpg"),
   dosaMasala: wiki("c/c0/Masala_Dosa_in_triangle.jpg/600px-Masala_Dosa_in_triangle.jpg"),
   dosaMysore: wiki("e/e5/Mysore_Masala_Dosa.jpg/600px-Mysore_Masala_Dosa.jpg"),
@@ -38,26 +43,50 @@ const IMG = {
   dosaGhee: wiki("b/b8/Ghee_Roast_Dosa.jpg/600px-Ghee_Roast_Dosa.jpg"),
   dosaPaper: wiki("9/9e/Paper_Dosa_(South_Indian_cuisine).jpg/600px-Paper_Dosa_(South_Indian_cuisine).jpg"),
   dosaSpring: wiki("a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/600px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg"),
-  bananaLeaf: px(7234281),     // Variety of Cooked Food on Banana Leaf
-  indianDishes: px(7129403),   // Various traditional Indian dishes served on table
-  samosa: px(14477873),        // Delicious Fried Samosa in a Wicker Tray
+
+  // === Uthappam ===
+  uthappam: wiki("c/c6/Mini_Uttappam.jpg/600px-Mini_Uttappam.jpg"),
+
+  // === Breads ===
+  poori: wiki("3/39/Puri.jpg/600px-Puri.jpg"),
+  parotta: wiki("e/e6/Malabar_Parota_and_egg_curry.JPG/600px-Malabar_Parota_and_egg_curry.JPG"),
+
+  // === Rice ===
+  lemonRice: wiki("f/f0/Chitranna_(Lemon_Rice)_prepared_by_an_indian_woman.jpg/600px-Chitranna_(Lemon_Rice)_prepared_by_an_indian_woman.jpg"),
+  tamarindRice: wiki("a/ad/LEMON_PULIHORA.JPG/600px-LEMON_PULIHORA.JPG"),
+  coconutRice: wiki("b/b1/Madurai_coconut_rice.JPG/600px-Madurai_coconut_rice.JPG"),
+  curdRice: wiki("4/43/Curd_Rice_ThayirSaadam.JPG/600px-Curd_Rice_ThayirSaadam.JPG"),
   biryani: px(7340956),        // Close-up Photo of a Biryani Dish
-  biryaniTop: px(12737817),    // Top View of a Chicken Biryani Dish
+
+  // === Thali & Combos ===
+  indianDishes: px(7129403),   // Various traditional Indian dishes served on table
+  thali: wiki("4/4f/Traditional_south_indian_meals.jpg/600px-Traditional_south_indian_meals.jpg"),
+  sambar: wiki("1/15/Sambar.JPG/600px-Sambar.JPG"),
+
+  // === Snacks ===
+  samosa: px(14477873),        // Delicious Fried Samosa in a Wicker Tray
+  papadChaat: wiki("9/97/Masala_Papad_2.jpg/600px-Masala_Papad_2.jpg"),
+  paneer65: wiki("5/5d/Chicken_65_(Dish).jpg/600px-Chicken_65_(Dish).jpg"),
+  fritters: px(1059943),       // Close-up Photo of Fritters (Mirchi Bhaji)
+
+  // === Indo-Chinese ===
+  gobiManchurian: wiki("e/e8/Gobi_manchurian.jpg/600px-Gobi_manchurian.jpg"),
+  vegFriedRice: wiki("7/79/Vegetable_Fried_Rice.jpg/600px-Vegetable_Fried_Rice.jpg"),
+  noodles: px(23833914),       // Close-up of Noodles on a Fork
+  paneerManchurian: wiki("e/e8/Gobi_manchurian.jpg/600px-Gobi_manchurian.jpg"),
+
+  // === Desserts ===
   gulabJamun: px(11887844),    // Close-up Photo of Gulab Jamun
-  gulabJamunSyrup: px(7406888), // Gulab Jamun in Syrup
-  gulabJamunBowl: px(15014919), // Bowl of Gulab Jamun
+  ravaKesari: wiki("8/8f/Kesari_bhath.jpg/600px-Kesari_bhath.jpg"),
+  rasmalai: wiki("a/ae/Ras_Malai_2.JPG/600px-Ras_Malai_2.JPG"),
+  jalebi: wiki("7/7a/Jalebi.JPG/600px-Jalebi.JPG"),
+
+  // === Beverages ===
+  filterCoffee: wiki("3/3e/Dabara_set_with_coffee.jpg/600px-Dabara_set_with_coffee.jpg"),
+  masalaChai: wiki("0/04/Masala_Chai.JPG/600px-Masala_Chai.JPG"),
   mangoLassi: px(14509267),    // Glasses of Delicious Mango Lassi on Wooden Board
   lassi: px(6808666),          // Lassi - Popular Indian Drink
-  yogurtDrink: px(4475024),    // White Liquid in Clear Drinking Glasses (Indian lassi)
-  naanCurry: px(2474661),      // Bread With Soup (naan with Indian curry)
-  pavBhaji: px(5410400),       // Pav Bhaji Dish on a Bowl
-  noodles: px(23833914),       // Close-up of Noodles on a Fork
-  fritters: px(1059943),       // Close-up Photo of Fritters
-  coffee: px(324028),          // Close-up of Coffee Cup
-  coffeeCup: px(2128016),      // White Ceramic Coffee Cup
-  paneerTikka: px(28674559),    // Classic Indian Curry Dish with Assorted Paneer Tikka
-  paniPuri: px(5410400),        // Indian Street Food (reuse Pav Bhaji)
-  dalMakhani: px(12737916),    // Dal Makhani on a White Bowl
+  freshJuice: wiki("c/c6/Fruit_juice_mix.JPG/600px-Fruit_juice_mix.JPG"),
 };
 
 export const menuCategories: MenuCategory[] = [
@@ -97,7 +126,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Medu Vada (2 pcs)",
         description: "Crispy golden urad dal fritters with a fluffy interior, served with chutneys",
         price: "$8.99",
-        image: IMG.idliOverhead,
+        image: IMG.meduVada,
         vegan: true,
         glutenFree: true,
       },
@@ -105,7 +134,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Sambar Vada",
         description: "Crispy vadas soaked in hot, tangy sambar – the ultimate comfort food",
         price: "$9.49",
-        image: IMG.idliOverhead,
+        image: IMG.sambarVada,
         popular: true,
         vegan: true,
         glutenFree: true,
@@ -114,7 +143,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Curd Vada",
         description: "Soft vadas soaked in creamy yogurt, tempered with mustard and curry leaves",
         price: "$9.49",
-        image: IMG.yogurtDrink,
+        image: IMG.curdVada,
         glutenFree: true,
       },
     ],
@@ -201,7 +230,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Onion Uthappam",
         description: "Thick savory pancake generously topped with caramelized onions",
         price: "$10.99",
-        image: IMG.bananaLeaf,
+        image: IMG.uthappam,
         vegan: true,
         glutenFree: true,
       },
@@ -209,7 +238,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Mixed Vegetable Uthappam",
         description: "Loaded with onions, tomatoes, capsicum, and green chilies",
         price: "$11.99",
-        image: IMG.bananaLeaf,
+        image: IMG.uthappam,
         vegan: true,
         glutenFree: true,
       },
@@ -217,7 +246,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Tomato Uthappam",
         description: "Topped with juicy diced tomatoes and tempered with mustard seeds",
         price: "$10.99",
-        image: IMG.bananaLeaf,
+        image: IMG.uthappam,
         vegan: true,
         glutenFree: true,
       },
@@ -233,28 +262,28 @@ export const menuCategories: MenuCategory[] = [
         name: "Poori with Side",
         description: "Puffy deep-fried wheat bread served with potato masala or chole",
         price: "$14.19",
-        image: IMG.naanCurry,
+        image: IMG.poori,
         vegan: true,
       },
       {
         name: "Parota with Veg Kurma",
         description: "Flaky, layered Malabar parotta served with rich vegetable kurma",
         price: "$14.73",
-        image: IMG.naanCurry,
+        image: IMG.parotta,
         popular: true,
       },
       {
         name: "Parota with Salna",
         description: "Crispy layered parotta paired with spicy, tangy salna gravy",
         price: "$14.19",
-        image: IMG.dalMakhani,
+        image: IMG.parotta,
         spiceLevel: 2,
       },
       {
         name: "Ilai Parota (Weekend Special)",
         description: "Leaf-thin layered parotta – a weekend-only delicacy you cannot miss",
         price: "$15.99",
-        image: IMG.naanCurry,
+        image: IMG.parotta,
         popular: true,
       },
     ],
@@ -269,7 +298,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Lemon Rice",
         description: "Tangy turmeric rice tempered with peanuts, mustard seeds, and curry leaves",
         price: "$11.99",
-        image: IMG.biryaniTop,
+        image: IMG.lemonRice,
         vegan: true,
         glutenFree: true,
       },
@@ -277,7 +306,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Tamarind Rice",
         description: "Sweet and tangy rice with tamarind paste, peanuts, and aromatic spices",
         price: "$11.99",
-        image: IMG.biryaniTop,
+        image: IMG.tamarindRice,
         vegan: true,
         glutenFree: true,
       },
@@ -285,7 +314,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Coconut Rice",
         description: "Fragrant rice tossed with fresh grated coconut and cashews",
         price: "$11.99",
-        image: IMG.biryaniTop,
+        image: IMG.coconutRice,
         vegan: true,
         glutenFree: true,
       },
@@ -293,7 +322,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Curd Rice",
         description: "Cool, creamy yogurt rice tempered with mustard and pomegranate seeds",
         price: "$10.99",
-        image: IMG.yogurtDrink,
+        image: IMG.curdRice,
         glutenFree: true,
       },
       {
@@ -324,7 +353,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Weekend Thali",
         description: "Enhanced thali with special weekend items, rice, sambar, and more",
         price: "$18.99",
-        image: IMG.bananaLeaf,
+        image: IMG.thali,
         popular: true,
       },
       {
@@ -338,7 +367,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Curry Combo (Serves 2-3)",
         description: "Sambar (16oz), Rasam (16oz), Poriyal (12oz), and Kootu (12oz)",
         price: "$24.99",
-        image: IMG.dalMakhani,
+        image: IMG.sambar,
       },
     ],
   },
@@ -367,7 +396,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Papad Chaat",
         description: "Crispy papads topped with onions, tomatoes, and tangy chutneys",
         price: "$6.99",
-        image: IMG.paniPuri,
+        image: IMG.papadChaat,
         vegan: true,
         glutenFree: true,
       },
@@ -375,7 +404,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Paneer 65",
         description: "Crispy paneer cubes tossed in a spicy, tangy masala with curry leaves",
         price: "$12.99",
-        image: IMG.paneerTikka,
+        image: IMG.paneer65,
         spiceLevel: 2,
         popular: true,
       },
@@ -391,7 +420,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Gobi Manchurian",
         description: "Crispy cauliflower florets tossed in a sweet, spicy, and tangy sauce",
         price: "$12.99",
-        image: IMG.fritters,
+        image: IMG.gobiManchurian,
         popular: true,
         spiceLevel: 2,
         vegan: true,
@@ -400,7 +429,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Veg Fried Rice",
         description: "Wok-tossed rice with vegetables, soy sauce, and Indian spices",
         price: "$12.99",
-        image: IMG.biryaniTop,
+        image: IMG.vegFriedRice,
         vegan: true,
       },
       {
@@ -414,7 +443,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Paneer Manchurian",
         description: "Crispy paneer cubes in a bold manchurian sauce with peppers",
         price: "$13.99",
-        image: IMG.paneerTikka,
+        image: IMG.paneerManchurian,
         spiceLevel: 2,
       },
     ],
@@ -436,20 +465,20 @@ export const menuCategories: MenuCategory[] = [
         name: "Rava Kesari",
         description: "Warm semolina pudding with ghee, saffron, cashews, and raisins",
         price: "$5.99",
-        image: IMG.gulabJamunBowl,
+        image: IMG.ravaKesari,
         popular: true,
       },
       {
         name: "Rasmalai (2 pcs)",
         description: "Soft cottage cheese patties in chilled, cardamom-infused cream",
         price: "$6.99",
-        image: IMG.gulabJamunSyrup,
+        image: IMG.rasmalai,
       },
       {
         name: "Jalebi",
         description: "Crispy, syrup-soaked spirals of fermented batter – sweet and tangy",
         price: "$5.99",
-        image: IMG.gulabJamunSyrup,
+        image: IMG.jalebi,
         vegan: true,
       },
     ],
@@ -464,7 +493,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Filter Coffee",
         description: "Authentic South Indian filter coffee – strong, aromatic, and frothy",
         price: "$3.99",
-        image: IMG.coffee,
+        image: IMG.filterCoffee,
         popular: true,
         vegan: true,
         glutenFree: true,
@@ -473,7 +502,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Masala Chai",
         description: "Spiced tea brewed with ginger, cardamom, cloves, and cinnamon",
         price: "$3.99",
-        image: IMG.coffeeCup,
+        image: IMG.masalaChai,
         glutenFree: true,
       },
       {
@@ -494,7 +523,7 @@ export const menuCategories: MenuCategory[] = [
         name: "Fresh Juice",
         description: "Seasonal fresh-pressed juice – ask about today's selection",
         price: "$5.99",
-        image: IMG.yogurtDrink,
+        image: IMG.freshJuice,
         vegan: true,
         glutenFree: true,
       },
