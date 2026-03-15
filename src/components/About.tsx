@@ -13,7 +13,7 @@ export default function About() {
               <div className="space-y-4">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80"
+                    src="https://images.pexels.com/photos/31199041/pexels-photo-31199041.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Fresh idlis with chutney"
                     fill
                     className="object-cover"
@@ -22,7 +22,7 @@ export default function About() {
                 </div>
                 <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=600&q=80"
+                    src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="South Indian filter coffee"
                     fill
                     className="object-cover"
@@ -33,7 +33,7 @@ export default function About() {
               <div className="space-y-4 pt-8">
                 <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1668236543090-82eb5eab3f85?w=600&q=80"
+                    src="https://images.pexels.com/photos/32229637/pexels-photo-32229637.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Crispy golden dosa"
                     fill
                     className="object-cover"
@@ -42,7 +42,7 @@ export default function About() {
                 </div>
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80"
+                    src="https://images.pexels.com/photos/7129403/pexels-photo-7129403.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Traditional South Indian thali"
                     fill
                     className="object-cover"

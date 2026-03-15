@@ -10,7 +10,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=1920&q=80')",
+            "url('https://images.pexels.com/photos/8312083/pexels-photo-8312083.jpeg?auto=compress&cs=tinysrgb&w=1920')",
         }}
       />
       <div className="hero-overlay absolute inset-0" />
