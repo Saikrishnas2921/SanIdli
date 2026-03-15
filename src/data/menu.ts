@@ -23,9 +23,9 @@ const px = (id: number) =>
 
 // Verified Pexels photo IDs for South Indian food
 const IMG = {
-  idli: px(31199041),          // Traditional South Indian Idli with Sambar and Chutney
+  idli: px(8312083),            // Overhead Shot of Indian Food (idli, vada, sambar) - same as overhead
   idliOverhead: px(8312083),   // Overhead Shot of Indian Food (idli, vada, sambar, chutney plate)
-  dosa: px(32229637),          // Traditional South Indian Masala Dosa on Banana Leaf
+  dosa: px(1639561),            // Selective Focus Photography of Cooked Food (Indian cuisine)
   bananaLeaf: px(7234281),     // Variety of Cooked Food on Banana Leaf
   indianDishes: px(7129403),   // Various traditional Indian dishes served on table
   samosa: px(14477873),        // Delicious Fried Samosa in a Wicker Tray
@@ -33,7 +33,7 @@ const IMG = {
   biryaniTop: px(12737817),    // Top View of a Chicken Biryani Dish
   gulabJamun: px(11887844),    // Close-up Photo of Gulab Jamun
   gulabJamunSyrup: px(7406888), // Gulab Jamun in Syrup
-  gulabJamunBowl: px(29259167), // Delicious Gulab Jamun Dessert in Decorative Bowl
+  gulabJamunBowl: px(15014919), // Bowl of Gulab Jamun
   mangoLassi: px(14509267),    // Glasses of Delicious Mango Lassi on Wooden Board
   lassi: px(6808666),          // Lassi - Popular Indian Drink
   yogurtDrink: px(4475024),    // White Liquid in Clear Drinking Glasses (Indian lassi)
@@ -43,7 +43,7 @@ const IMG = {
   fritters: px(1059943),       // Close-up Photo of Fritters
   coffee: px(324028),          // Close-up of Coffee Cup
   coffeeCup: px(2128016),      // White Ceramic Coffee Cup
-  paniPuri: px(34270741),      // Delicious Indian Street Food Pani Puri
+  paniPuri: px(5410400),        // Indian Street Food (reuse Pav Bhaji)
   dalMakhani: px(12737916),    // Dal Makhani on a White Bowl
 };
 

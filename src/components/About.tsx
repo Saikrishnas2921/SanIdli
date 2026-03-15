@@ -13,7 +13,7 @@ export default function About() {
               <div className="space-y-4">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.pexels.com/photos/31199041/pexels-photo-31199041.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/8312083/pexels-photo-8312083.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Fresh idlis with chutney"
                     fill
                     className="object-cover"
@@ -33,7 +33,7 @@ export default function About() {
               <div className="space-y-4 pt-8">
                 <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.pexels.com/photos/32229637/pexels-photo-32229637.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/1639561/pexels-photo-1639561.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Crispy golden dosa"
                     fill
                     className="object-cover"
